@@ -14,15 +14,74 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            lintOptions {
+                checkReleaseBuilds false
+                abortOnError false
+            }
         }
     }
 }
 
 dependencies {
+    //Default dependencies
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+
+    //Testing dependency
+    implementation "com.android.support.test.espresso:espresso-idling-resource:3.0.2"
+    androidTestImplementation "com.android.support:support-annotations:28.0.0"
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation "com.android.support.test:rules:1.0.2"
+    androidTestImplementation "com.android.support.test.espresso:espresso-contrib:3.0.2"
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    //Support library dependency for design
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+
+    //JSON client dependency
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+
+    //Logging and making HTTP request client dependency
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.10.0'
+
+    //Dependency injection framework for testing
+    implementation 'com.google.dagger:dagger:2.13'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.13'
+    implementation 'com.google.dagger:dagger-android:2.15'
+    implementation 'com.google.dagger:dagger-android-support:2.13'
+    annotationProcessor 'com.google.dagger:dagger-android-processor:2.13'
+
+    //Reduce boilerplate code dependency
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.9'
+
+    //Video player dependency
+    implementation 'com.google.android.exoplayer:exoplayer:2.7.3'
+
+    //ContentProvider dependency
+    annotationProcessor 'net.simonvt.schematic:schematic-compiler:0.7.0'
+    implementation 'net.simonvt.schematic:schematic:0.7.0'
+
+    //Debugging dependency
+    implementation 'com.facebook.stetho:stetho:1.5.0'
+    implementation 'com.facebook.stetho:stetho-okhttp3:1.5.0'
+
+    //Logging dependency
+    implementation 'com.jakewharton.timber:timber:4.7.0'
+
+    //Material Stepper dependency for design
+    implementation 'moe.feng:MaterialStepperView:0.2.4.2'
+
+    //Data binding dependency
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 }
