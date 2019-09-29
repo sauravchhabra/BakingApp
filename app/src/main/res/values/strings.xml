@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">BakingApp</string>
+    <string name="app_name">Baking App</string>
+    <string name="show">Show</string>
+    <string name="back">Back</string>
+    <string name="step">Step %1$d</string>
+    <string name="instructions">Instructions</string>
+    <string name="add_to_widget">Add this recipe to widget list</string>
+    <string name="recipe_added">Successfully added recipe</string>
+    <string name="add_recipe_widget">Add some recipe to widget first</string>
 </resources>
