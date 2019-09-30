@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/colorPrimary"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:background="@color/colorPrimary">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/recipe_tv_widget_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/widget_margin"
@@ -20,13 +19,14 @@
         tools:text="Dish Name" />
 
     <TextView
+        android:id="@+id/ingredients_tv_widget_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/widget_margin"
         android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/recipe_tv_widget_item"
         tools:text="Item 1\nItem 2\nItem 3" />
 
 </android.support.constraint.ConstraintLayout>
