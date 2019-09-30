@@ -8,4 +8,9 @@
     <string name="recipe_added">Successfully added recipe</string>
     <string name="add_recipe_widget">Add some recipe to widget first</string>
     <string name="dish_image_description">Dish Image</string>
+    <string name="video_thumbnail_description">Video thumbnail icon</string>
+    <string name="show_button">Show</string>
+    <string name="back_button">Back</string>
+    <string name="previous_button">Prev</string>
+    <string name="next_button">Next</string>
 </resources>
