@@ -7,4 +7,5 @@
     <string name="add_to_widget">Add this recipe to widget list</string>
     <string name="recipe_added">Successfully added recipe</string>
     <string name="add_recipe_widget">Add some recipe to widget first</string>
+    <string name="dish_image_description">Dish Image</string>
 </resources>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="8dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/dish_iv_main"
+            android:layout_width="@dimen/image_dimen_main"
+            android:layout_height="@dimen/image_dimen_main"
+            android:layout_margin="4dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/dish_image_description"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/brownies" />
+
+        <TextView
+            android:id="@+id/dish_tv_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/dish_iv_main"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Dish Name" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
+            android:id="@+id/serving_main"
+            android:drawablePadding="8dp"
+            android:drawableStart="@drawable/ic_local_dining_black_24dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/dish_tv_main"
+            app:layout_constraintStart_toStartOf="@+id/dish_tv_main"
+            app:layout_constraintTop_toBottomOf="@+id/dish_tv_main"
+            tools:text="Serving Size" />
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.design.card.MaterialCardView>

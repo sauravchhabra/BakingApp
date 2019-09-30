@@ -2,4 +2,6 @@
 <!--TODO: Define the  height and width here of all the qualifiers-->
 <resources>
     <dimen name="widget_min_value">180dp</dimen>
+    <dimen name="widget_margin">8dp</dimen>
+    <dimen name="image_dimen_main">120dp</dimen>
 </resources>
