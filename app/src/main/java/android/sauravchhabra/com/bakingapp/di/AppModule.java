@@ -4,8 +4,14 @@ import android.app.Application;
 import android.content.Context;
 import android.sauravchhabra.com.bakingapp.BuildConfig;
 import android.sauravchhabra.com.bakingapp.data.remote.Api;
+import android.sauravchhabra.com.bakingapp.ui.detail.RecipeDetail;
+import android.sauravchhabra.com.bakingapp.ui.detail.RecipeDetailFragment;
+import android.sauravchhabra.com.bakingapp.ui.detail.RecipeDetailInteractor;
+import android.sauravchhabra.com.bakingapp.ui.detail.RecipeDetailView;
 import android.sauravchhabra.com.bakingapp.ui.recipe.RecipeBasicView;
+import android.sauravchhabra.com.bakingapp.ui.recipe.RecipeInteractor;
 import android.sauravchhabra.com.bakingapp.ui.recipe.RecipeListFragment;
+import android.sauravchhabra.com.bakingapp.ui.recipe.RecipeView;
 import android.sauravchhabra.com.bakingapp.utils.Constants;
 
 import com.facebook.stetho.okhttp3.StethoInterceptor;
@@ -66,7 +72,7 @@ public class AppModule {
     }
 
     @Provides
-    RecipesBasicView getRecipesBasicView() {
+    RecipeBasicView getRecipesBasicView() {
         return new RecipeListFragment();
     }
 
@@ -76,12 +82,12 @@ public class AppModule {
     }
 
     @Provides
-    RecipeProvider getRecipeProvider(RecipeBasicView recipeBasicView, RecipeInteractor recipeInteractor) {
-        return new RecipeProvider(recipeBasicView, recipeInteractor);
+    RecipeView getRecipeProvider(RecipeBasicView recipeBasicView, RecipeInteractor recipeInteractor) {
+        return new RecipeView(recipeBasicView, recipeInteractor);
     }
 
     @Provides
-    RecipeDetailView getRecipeDetailView() {
+    RecipeDetail getRecipeDetailView() {
         return new RecipeDetailFragment();
     }
 
@@ -91,9 +97,9 @@ public class AppModule {
     }
 
     @Provides
-    RecipeDetailProvider getRecipeDetailProvider(RecipeDetailView recipeDetailView,
-                                                 RecipeDetailInteractor recipeDetailInteractor) {
-        return new RecipeDetailProvider(recipeDetailView, recipeDetailInteractor);
+    RecipeDetailView getRecipeDetailProvider(RecipeDetail recipeDetail,
+                                             RecipeDetailInteractor recipeDetailInteractor) {
+        return new RecipeDetailView(recipeDetail, recipeDetailInteractor);
     }
 }
 

@@ -26,10 +26,8 @@ public interface AppComponentBuilder {
         @BindsInstance
         Builder application(Application application);
 
-        AppComponent build();
+        AppComponentBuilder build();
     }
 
     void inject(BakingApp bakingApp);
 }
-
-//TODO: Fix this error

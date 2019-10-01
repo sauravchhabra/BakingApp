@@ -6,7 +6,7 @@ import android.content.res.Configuration;
 /**
  * A simple class to check if the running device is either tablet or in landscape mode
  */
-public class isTabletOrLandscape {
+public class IsTabletOrLandscape {
 
     public static boolean isTabletDisplay(Context context) {
         return (context.getResources().getConfiguration().screenLayout &

@@ -1,5 +1,6 @@
 package android.sauravchhabra.com.bakingapp.di;
 
+import android.sauravchhabra.com.bakingapp.ui.detail.RecipeDetailActivity;
 import android.sauravchhabra.com.bakingapp.ui.recipe.MainActivity;
 
 import dagger.android.ContributesAndroidInjector;
@@ -13,7 +14,7 @@ public abstract class ActivityBuilder {
     abstract MainActivity mainActivity();
 
     @ContributesAndroidInjector(modules = FragmentBuilder.class)
-    abstract DetailActivity detailActivity();
+    abstract RecipeDetailActivity detailActivity();
 }
 
 //TODO: Fix this error

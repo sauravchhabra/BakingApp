@@ -7,9 +7,10 @@ import android.sauravchhabra.com.bakingapp.R;
 import android.sauravchhabra.com.bakingapp.base.BaseFragment;
 import android.sauravchhabra.com.bakingapp.idlingresource.SimpleIdlingResource;
 import android.sauravchhabra.com.bakingapp.model.Recipes;
+import android.sauravchhabra.com.bakingapp.ui.detail.RecipeDetailActivity;
 import android.sauravchhabra.com.bakingapp.utils.Column;
 import android.sauravchhabra.com.bakingapp.utils.Constants;
-import android.sauravchhabra.com.bakingapp.utils.isTabletOrLandscape;
+import android.sauravchhabra.com.bakingapp.utils.IsTabletOrLandscape;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.annotation.VisibleForTesting;
@@ -133,7 +134,7 @@ public class RecipeListFragment extends BaseFragment implements
     public void showRecipes(List<Recipes> recipesList) {
         mRecipeRecyclerAdapter = new RecipeRecyclerAdapter(recipesList, getActivity(), this);
 
-        if (!isTabletOrLandscape.isTabletDisplay((getActivity()))) {
+        if (!IsTabletOrLandscape.isTabletDisplay((getActivity()))) {
             mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         } else {
             mRecyclerView.setLayoutManager(new GridLayoutManager(getActivity(),
@@ -147,7 +148,6 @@ public class RecipeListFragment extends BaseFragment implements
     @Override
     public void onClickListener(Recipes recipes) {
         Intent intent = new Intent(getActivity(), RecipeDetailActivity.class);
-        //TODO: Fix this error
         intent.putExtra(Constants.RECIPES, recipes);
         startActivity(intent);
     }
@@ -171,7 +171,7 @@ public class RecipeListFragment extends BaseFragment implements
 
     @Override
     public void showNetworkConnectionError() {
-        Toast.makeText(toast_context, "Possible a netword connection error", toast_length).show();
+        Toast.makeText(toast_context, "Possibly a network connection error", toast_length).show();
     }
 
     @Override

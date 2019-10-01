@@ -10,6 +10,6 @@ public final class Constants {
     public static String STEP_INDEX_RESULT = "step_index_result";
     public static int STEPS_REQUEST_CODE = 101;
     public static final String RECIPES = "recipes";
-    public static final String STEPS_ = "steps";
+    public static final String STEPS = "steps";
 
 }
