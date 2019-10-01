@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "android.sauravchhabra.com.bakingapp"
+        applicationId "nanodegree.sauravchhabra.com.bakingapp"
         minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
